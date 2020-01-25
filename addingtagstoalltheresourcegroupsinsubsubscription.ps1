@@ -1,12 +1,17 @@
 
-To set tags to all the resource groups in a subscription 
+##This script will add tags to all Resourcegrous in the specified subscription.
+
+ #Add agreed tags 
+# Get a list of all ResourceGroups in subscription
+    $resourceGroups = Get-AzResourceGroup
+      Write-Output "Processing [$($resourceGroups.Count)] Resourcegroups found in subscription"
 
 
-$resourceGroups = Get-AzResourceGroup
+foreach($rg in $resourceGroups)
+    {
+        $taglist = $rg.tags
+		$taglist += @{Sponsor="";Owner="";DXC_AutoDeploy="";Expiry_Date="";Product="";Shared="";Environment="";Client="";Server_Role="";WBS="";Deployed_By=""}
+       
 
-foreach($rg in $resourceGroups){
-$taglist = $rg.tags
-              $taglist += @{Tag1="Tag1Value";Tag2="Tag2Value";Tag3="Tag3Value"}
-
-Set-AzResourceGroup -ResourceGroupName $rg.ResourceGroupName -Tag $taglist
+        Set-AzResourceGroup -ResourceGroupName $rg.ResourceGroupName -Tag $taglist
 } 
