@@ -34,5 +34,18 @@ if ($null -ne $group.Tags) {
     }
     }
 
+#####################################################################################################################################
+   
+   ###Remove all the tags from the resoucegroups ####
 
+    in this example wolves is the resourcegroup
+
+    Set-AzResourceGroup -Name wolves -Tag @{}
+    
+    
+    ############################################
+    
+    
+    
+    
 
