@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "uksouth"
+        },
+        "networkInterfaceName": {
+            "value": "kashvm3361"
+        },
+        "subnetName": {
+            "value": "subnet1"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/317af27c-bb9b-43c5-ad52-ae1d11ed72c0/resourceGroups/kashrg/providers/Microsoft.Network/virtualNetworks/kashvnet"
+        },
+        "publicIpAddressName": {
+            "value": "kashvm3-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "kashvm3"
+        },
+        "virtualMachineRG": {
+            "value": "kashrg"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ls"
+        },
+        "adminUsername": {
+            "value": "kashifaliuk"
+        },
+        "adminPassword": {
+            "value": "4037Mangopaper!"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "kashrgdiag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/317af27c-bb9b-43c5-ad52-ae1d11ed72c0/resourceGroups/kashrg/providers/Microsoft.Storage/storageAccounts/kashrgdiag"
+        },
+        "autoShutdownStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownTime": {
+            "value": "19:00"
+        },
+        "autoShutdownTimeZone": {
+            "value": "UTC"
+        },
+        "autoShutdownNotificationStatus": {
+            "value": "Disabled"
+        },
+        "autoShutdownNotificationLocale": {
+            "value": "en"
+        }
+    }
+}
